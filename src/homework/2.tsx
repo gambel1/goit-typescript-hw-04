@@ -2,7 +2,7 @@ import { useReducer } from "react";
 
 interface StateTypes {
   isRequestInProgress: boolean;
-  requestStep: string;
+  requestStep: "start" | "pending" | "finished" | "idle";
 }
 
 type Action =

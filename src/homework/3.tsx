@@ -1,7 +1,11 @@
 import { ChangeEvent, useState } from "react";
 
-export function FormComponent() {
-  const [value, setValue] = useState<string>("");
+interface IProps {
+  title: string;
+}
+
+export function FormComponent({ title }: IProps) {
+  const [value, setValue] = useState("");
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
